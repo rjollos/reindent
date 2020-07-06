@@ -1,20 +1,21 @@
-# vim:fileencoding=utf-8
+#/usr/bin/env python
 
 import sys
-from distutils.core import setup
+from setuptools import setup
 
 
 def main():
     setup(
-        name='Reindent',
-        version='0.1.1',
+        name='reindent',
+        version='3.5',
         author="Tim Peters",
         author_email='nottimsemail@notadomain.foo',
         scripts=['reindent'],
         py_modules=['reindent'],
-        maintainer="Dan Buch",
-        maintainer_email="dan@meatballhat.com",
+        maintainer="Ryan Ollos",
+        maintainer_email="ryan.j.ollos@gmail.com",
         description='reindent script by Tim Peters',
+        install_requires=['setuptools'],
         keywords=['reindent', 'pep8', 'syntax', 'lint', 'tab', 'space'],
         classifiers=[
             "Development Status :: 6 - Mature",
@@ -23,13 +24,14 @@ def main():
             "License :: Public Domain",
             "Natural Language :: English",
             "Programming Language :: Python",
+            "Programming Language :: Python :: 3",
             "Topic :: Software Development :: Quality Assurance",
         ],
-        long_description=open('README.txt').read(),
+        long_description=open('README.md').read(),
+        long_description_content_type='text/markdown',
         platforms=['any'],
         license="Public Domain"
     )
-
     return 0
 
 
